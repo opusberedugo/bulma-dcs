@@ -1,0 +1,36 @@
+////////////////////////////////////////////////
+// JOURNAL
+////////////////////////////////////////////////
+$grey-darker: #363636;
+$grey-dark: #4a4a4a;
+$grey: #7a7a7a;
+$grey-light: #b5b5b5;
+$grey-lighter: #dbdbdb;
+
+$orange: #f57a00;
+$yellow: #f5e625;
+$green: #8ebf45;
+$turquoise: #00aba9;
+$blue: #071b8c;
+$purple: #642d73;
+$red: #ff2e12;
+
+$primary: #70088c !default;
+$danger: $orange;
+
+// $family-heading: "Raleway", "Lucida Grande", "Lucida Sans Unicode",
+  // "Lucida Sans", Geneva, Arial, sans-serif;
+
+$family-heading: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 
+  'Open Sans', 'Helvetica Neue', sans-serif;
+
+$radius: 4px;
+
+$navbar-item-hover-color: $primary;
+$navbar-item-active-color: $primary;
+$navbar-dropdown-item-hover-color: $primary;
+$navbar-dropdown-item-active-color: $primary;
+
+$bulmaswatch-import-font: true !default;
+
+$control-height: 2.5em;

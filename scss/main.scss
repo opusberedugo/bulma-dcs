@@ -1,0 +1,108 @@
+@import "./template/variables";
+@import "bulma";
+@import "./template/overrides";
+
+$colors: (
+  purple:#70088c,
+  pale-purple: #642d73,
+  blue:#071b8c,
+  green:#8ebf45,
+  white: #f2f2f2,
+  grey: #37373d
+);
+
+@mixin media-max($width){
+  @media all and (max-width: $width) {
+    @content;
+  }
+}
+
+// Decorating Lines for heading
+@each $color-name,
+$color-value in $colors {
+  .#{$color-name+"-line"} {
+    width: 350px;
+    margin: 0 auto;
+    border-top: 1px solid $color-name;
+    height: 5px;
+    @include media-max(450px){
+      width: 100%;
+    }
+  }
+}
+
+.has-background-purple{
+  background-color: #642d73;
+}
+.hero {
+  background-image: linear-gradient(#642d738f, #642d738f), url("../img/banner.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+
+
+.start{
+  position: relative;
+  bottom: 150px;
+}
+
+.locations{
+  .container{
+    .columns{
+      .column{
+        .icon-text{
+          &:hover{
+            transform: scale(1.1);
+          }
+          .icon{
+            clip-path: circle(20px);
+            // border-radius: 3rem !important;
+          }
+        }
+      }
+    }
+  }
+}
+
+form {
+  textarea {
+    resize: none !important;
+  }
+
+  button{
+    width: 100%;
+  }
+}
+
+footer{
+  // background-color:#eb6864 ;
+  .social-icons{
+    // text-align: center;
+    i{
+      font-size: 28px;
+    }
+  }
+}
+
+.columns{
+  .column{
+    .card{
+      .card-header{
+        .card-header-title{
+          &.is-smaller{
+            font-size: 78.6%;
+            @media  all and (max-width:1003px) {
+              font-size: 1em;
+            }
+          }
+        }
+      }
+    }
+  }
+  // .column{
+  //   .is-smailler{
+  //     font-size: 78%;
+  //   }
+  // }
+}
